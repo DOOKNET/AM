@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Sat Jan 20 04:05:32 2018
+# Process ID: 11496
+# Current directory: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1
+# Command line: vivado.exe -log cos_make.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cos_make.tcl
+# Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1/cos_make.vds
+# Journal file: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source cos_make.tcl -notrace
+Command: synth_design -top cos_make -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15644 
+ERROR: [Synth 8-2715] syntax error near ' [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:53]
+INFO: [Synth 8-2350] module cos_make ignored due to previous errors [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:1]
+Failed to read verilog 'E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v'
+INFO: [Common 17-83] Releasing license: Synthesis
+4 Infos, 0 Warnings, 1 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 20 04:05:40 2018...

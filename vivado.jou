@@ -1,0 +1,72 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Sat Jan 20 03:44:27 2018
+# Process ID: 17540
+# Current directory: E:/Workspace/Vivado_16.4/2018_1_20_AM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16840 E:\Workspace\Vivado_16.4\2018_1_20_AM\AM.xpr
+# Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/vivado.log
+# Journal file: E:/Workspace/Vivado_16.4/2018_1_20_AM\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.xpr
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+source tb_AM.tcl
+run 10 us
+restart
+relaunch_sim
+run 10 us
+run 10 us
+run 10 us
+run 100 us
+relaunch_sim
+run 100 us
+restart
+close_sim
+launch_simulation
+source tb_AM.tcl
+run 100 us
+run 100 us
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+source tb_AM.tcl
+close_sim
+launch_simulation
+source tb_AM.tcl
+run 100 us
+relaunch_sim
+run 100 us
+add_wave {{/tb_AM/cos_make_inst/cos_100k}} {{/tb_AM/cos_make_inst/cos_100k_r}} 
+restart
+run 100 us
+close_sim
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+source tb_AM.tcl
+run 100 us
+relaunch_sim
+run 100 us
+close_sim
+launch_simulation
+source tb_AM.tcl
+run 100 us
+relaunch_sim
+run 100 us
+relaunch_sim
+run 100 us
+close_sim
+launch_simulation
+source tb_AM.tcl
+relaunch_sim
+relaunch_sim
+run 100 us

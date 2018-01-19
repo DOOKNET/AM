@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Sat Jan 20 04:05:32 2018
+# Process ID: 11496
+# Current directory: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1
+# Command line: vivado.exe -log cos_make.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cos_make.tcl
+# Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1/cos_make.vds
+# Journal file: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source cos_make.tcl -notrace
