@@ -1,12 +1,12 @@
 module cos_make(
 	input	clk,
 	input	rst_n,
-	output	reg	signed	[8:0]	cos_100k,
+	output	reg	[7:0]	cos_100k,
 	output	reg	signed	[7:0]	cos_1M
 );
 
 //------------------------------------//
-parameter freq_s = 32'd4294967;		//调制信号频率
+parameter freq_s = 32'd429497;		//调制信号频率
 parameter freq_c = 32'd42949673;		//载波频率
 parameter cnt_width = 8'd32;
 //------------------------------------//
@@ -54,8 +54,5 @@ always @(posedge clk or negedge rst_n) begin
 		cos_1M <= cos_1M_r;
 	end
 end
-
-//assign	cos_100k = cos_100k_r + 8'd512;
-//assign	cos_1M = cos_1M_r;
 
 endmodule

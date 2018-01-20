@@ -1,0 +1,49 @@
+
+*** Running vivado
+    with args -log MULT.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MULT.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+  **** IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source MULT.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 307.145 ; gain = 96.609
+INFO: [Synth 8-638] synthesizing module 'MULT' [e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/synth/MULT.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'MULT' (5#1) [e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/synth/MULT.vhd:68]
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 354.227 ; gain = 143.691
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 354.227 ; gain = 143.691
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 639.008 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 639.008 ; gain = 428.473
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 639.008 ; gain = 428.473
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    10|
+|2     |LUT1     |     3|
+|3     |LUT2     |    39|
+|4     |LUT3     |    11|
+|5     |LUT4     |    32|
+|6     |MULT_AND |    40|
+|7     |MUXCY    |    40|
+|8     |XORCY    |    44|
+|9     |FDRE     |    17|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 639.008 ; gain = 428.473
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 639.008 ; gain = 408.367

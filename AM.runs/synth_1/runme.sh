@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log cos_make.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cos_make.tcl
+EAStep vivado -log TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl

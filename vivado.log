@@ -2,10 +2,10 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Sat Jan 20 03:44:27 2018
-# Process ID: 17540
+# Start of session at: Sat Jan 20 12:27:20 2018
+# Process ID: 9280
 # Current directory: E:/Workspace/Vivado_16.4/2018_1_20_AM
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16840 E:\Workspace\Vivado_16.4\2018_1_20_AM\AM.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5204 E:\Workspace\Vivado_16.4\2018_1_20_AM\AM.xpr
 # Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/vivado.log
 # Journal file: E:/Workspace/Vivado_16.4/2018_1_20_AM\vivado.jou
 #-----------------------------------------------------------
@@ -16,11 +16,48 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Softwares/Vivado/Vivado/2016.4/data/ip'.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 799.402 ; gain = 143.813
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 830.078 ; gain = 151.645
+set_property -dict [list CONFIG.PortBWidth {9} CONFIG.OutputWidthHigh {16}] [get_ips MULT]
+generate_target all [get_files  E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'MULT'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'MULT'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'MULT'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'MULT'...
+catch { config_ip_cache -export [get_ips -all MULT] }
+export_ip_user_files -of_objects [get_files E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci] -no_script -sync -force -quiet
+reset_run MULT_synth_1
+launch_runs -jobs 4 MULT_synth_1
+[Sat Jan 20 12:41:20 2018] Launched MULT_synth_1...
+Run output will be captured here: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/MULT_synth_1/runme.log
+export_simulation -of_objects [get_files E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci] -directory E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files/sim_scripts -ip_user_files_dir E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files -ipstatic_source_dir E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/modelsim} {questa=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/questa} {riviera=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/riviera} {activehdl=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+set_property needs_refresh false [get_runs ROM_synth_1]
+set_property needs_refresh false [get_runs MULT_synth_1]
+set_property needs_refresh false [get_runs ROM_impl_1]
+set_property needs_refresh false [get_runs MULT_impl_1]
+set_property -dict [list CONFIG.PortBWidth {8} CONFIG.OutputWidthHigh {15}] [get_ips MULT]
+generate_target all [get_files  E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'MULT'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'MULT'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'MULT'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'MULT'...
+catch { config_ip_cache -export [get_ips -all MULT] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP MULT, cache-ID = 567fe26ee20613c8; cache size = 0.704 MB.
+catch { [ delete_ip_run [get_ips -all MULT] ] }
+INFO: [Project 1-386] Moving file 'E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci' from fileset 'MULT' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci'
+export_simulation -of_objects [get_files E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci] -directory E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files/sim_scripts -ip_user_files_dir E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files -ipstatic_source_dir E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/modelsim} {questa=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/questa} {riviera=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/riviera} {activehdl=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+set_property needs_refresh false [get_runs ROM_synth_1]
+set_property needs_refresh false [get_runs ROM_impl_1]
 reset_run synth_1
 launch_runs synth_1 -jobs 4
-INFO: [HDL 9-2216] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library work [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:1]
-[Sat Jan 20 03:44:56 2018] Launched synth_1...
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/MULT.xci' is already up-to-date
+[Sat Jan 20 12:43:52 2018] Launched synth_1...
 Run output will be captured here: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1/runme.log
 launch_simulation
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
@@ -37,524 +74,37 @@ INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado
 "xvlog -m64 --relax -prj tb_AM_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module modulate
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cos_make
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_AM
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+"xvhdl -m64 --relax -prj tb_AM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/sim/MULT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MULT
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
 Vivado Simulator 2016.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
+Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L xbip_utils_v3_0_7 -L xbip_pipe_v3_0_3 -L xbip_bram18k_v3_0_3 -L mult_gen_v12_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-426] cannot find port sclk on this module [E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v:19]
+ERROR: [VRFC 10-426] cannot find port sclk on this module [E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v:20]
 WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_AM_behav -key {Behavioral:sim_1:Functional:tb_AM} -tclbatch {tb_AM.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-source tb_AM.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_AM_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 810.969 ; gain = 11.566
-run 10 us
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 827.398 ; gain = 0.000
-run 10 us
-run 10 us
-run 10 us
-run 100 us
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-INFO: [VRFC 10-2458] undeclared symbol cos_10k, assumed default net type wire [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-run 100 us
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-INFO: [VRFC 10-2458] undeclared symbol cos_10k, assumed default net type wire [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_AM_behav -key {Behavioral:sim_1:Functional:tb_AM} -tclbatch {tb_AM.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-source tb_AM.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_AM_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-run 100 us
-run 100 us
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1
-
-launch_runs synth_1 -jobs 4
-INFO: [HDL 9-2216] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library work [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:1]
-[Sat Jan 20 03:52:16 2018] Launched synth_1...
-Run output will be captured here: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1/runme.log
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-INFO: [VRFC 10-2458] undeclared symbol cos_10k, assumed default net type wire [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_AM_behav -key {Behavioral:sim_1:Functional:tb_AM} -tclbatch {tb_AM.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-source tb_AM.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_AM_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_AM_behav -key {Behavioral:sim_1:Functional:tb_AM} -tclbatch {tb_AM.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-source tb_AM.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_AM_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-run 100 us
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:47]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-run 100 us
-add_wave {{/tb_AM/cos_make_inst/cos_100k}} {{/tb_AM/cos_make_inst/cos_100k_r}} 
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 100 us
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-ERROR: [VRFC 10-1412] syntax error near ' [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:53]
-WARNING: [VRFC 10-2096] empty statement in sequential block [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:52]
-ERROR: [VRFC 10-1040] module cos_make ignored due to previous errors [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:1]
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/xvlog.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/xvlog.log' file for more information.
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/elaborate.log' file for more information.
 ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
 ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-INFO: [HDL 9-2216] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library work [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:1]
-CRITICAL WARNING: [HDL 9-806] Syntax error near "'". [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:53]
-[Sat Jan 20 04:05:31 2018] Launched synth_1...
-Run output will be captured here: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1/runme.log
 launch_simulation
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
@@ -570,29 +120,53 @@ INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado
 "xvlog -m64 --relax -prj tb_AM_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module modulate
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cos_make
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:53]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_AM
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl -m64 --relax -prj tb_AM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/sim/MULT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MULT
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
 Vivado Simulator 2016.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
+Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L xbip_utils_v3_0_7 -L xbip_pipe_v3_0_3 -L xbip_bram18k_v3_0_3 -L mult_gen_v12_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" Line 1. Module TOP doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" Line 1. Module modulate doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" Line 1. Module TOP doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" Line 1. Module modulate doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package mult_gen_v12_0_12.mult_gen_v12_0_12_viv_comp
+Compiling package xbip_utils_v3_0_7.xbip_utils_v3_0_7_pkg
+Compiling package mult_gen_v12_0_12.mult_gen_v12_0_12_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
@@ -601,10 +175,21 @@ Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
 Compiling module xil_defaultlib.ROM
 Compiling module xil_defaultlib.cos_make
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture xilinx of entity mult_gen_v12_0_12.op_resize [\op_resize(ai_width=8,bi_width=8...]
+Compiling architecture xilinx of entity mult_gen_v12_0_12.luts [\luts(c_xdevicefamily="artix7",c...]
+Compiling architecture xilinx of entity mult_gen_v12_0_12.mult_gen_v12_0_12_viv [\mult_gen_v12_0_12_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_12.mult_gen_v12_0_12 [\mult_gen_v12_0_12(c_xdevicefami...]
+Compiling architecture mult_arch of entity xil_defaultlib.MULT [mult_default]
+Compiling module xil_defaultlib.modulate
+Compiling module xil_defaultlib.TOP
 Compiling module xil_defaultlib.tb_AM
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
 INFO: [USF-XSim-98] *** Running xsim
@@ -625,9 +210,11 @@ source tb_AM.tcl
 # run 1000ns
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module tb_AM.TOP_inst.cos_make_inst0.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_AM_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 861.559 ; gain = 0.250
+run 100 us
 run 100 us
 relaunch_sim
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
@@ -644,30 +231,54 @@ INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado
 "xvlog -m64 --relax -prj tb_AM_vlog.prj"
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module modulate
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cos_make
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:53]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TOP
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_AM
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl -m64 --relax -prj tb_AM_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/MULT/MULT/sim/MULT.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MULT
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
 Vivado Simulator 2016.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
+Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L xbip_utils_v3_0_7 -L xbip_pipe_v3_0_3 -L xbip_bram18k_v3_0_3 -L mult_gen_v12_0_12 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" Line 1. Module TOP doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" Line 1. Module modulate doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" Line 1. Module TOP doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" Line 1. Module modulate doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package mult_gen_v12_0_12.mult_gen_v12_0_12_viv_comp
+Compiling package xbip_utils_v3_0_7.xbip_utils_v3_0_7_pkg
+Compiling package mult_gen_v12_0_12.mult_gen_v12_0_12_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
@@ -676,391 +287,39 @@ Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
 Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
 Compiling module xil_defaultlib.ROM
 Compiling module xil_defaultlib.cos_make
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture xilinx of entity mult_gen_v12_0_12.op_resize [\op_resize(ai_width=8,bi_width=8...]
+Compiling architecture xilinx of entity mult_gen_v12_0_12.luts [\luts(c_xdevicefamily="artix7",c...]
+Compiling architecture xilinx of entity mult_gen_v12_0_12.mult_gen_v12_0_12_viv [\mult_gen_v12_0_12_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_12.mult_gen_v12_0_12 [\mult_gen_v12_0_12(c_xdevicefami...]
+Compiling architecture mult_arch of entity xil_defaultlib.MULT [mult_default]
+Compiling module xil_defaultlib.modulate
+Compiling module xil_defaultlib.TOP
 Compiling module xil_defaultlib.tb_AM
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
 Vivado Simulator 2016.4
 Time resolution is 1 ps
  Block Memory Generator module loading initial data...
  Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module tb_AM.TOP_inst.cos_make_inst0.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 903.320 ; gain = 0.000
+run 100 us
+run 100 us
+run 100 us
+add_wave {{/tb_AM/TOP_inst/cos_make_inst0/cos_100k}} {{/tb_AM/TOP_inst/cos_make_inst0/cos_1M}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 us
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_AM.TOP_inst.cos_make_inst0.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
 run 100 us
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-WARNING: [VRFC 10-986] literal value truncated to fit in 8 bits [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:53]
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_AM_behav -key {Behavioral:sim_1:Functional:tb_AM} -tclbatch {tb_AM.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-source tb_AM.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_AM_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-run 100 us
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-run 100 us
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port cos_100k [E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v:23]
-WARNING: [VRFC 10-278] actual bit length 9 differs from formal bit length 8 for port douta [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:41]
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-run 100 us
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 8 differs from formal bit length 9 for port cos_100k [E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v:23]
-WARNING: [VRFC 10-278] actual bit length 9 differs from formal bit length 8 for port douta [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:41]
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_AM_behav -key {Behavioral:sim_1:Functional:tb_AM} -tclbatch {tb_AM.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2016.4
-Time resolution is 1 ps
-source tb_AM.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_AM_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 9 differs from formal bit length 8 for port douta [E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v:41]
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-relaunch_sim
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'E:/Softwares/Vivado/Vivado/2016.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-INFO: [USF-XSim-37] Inspecting design source files for 'tb_AM' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/ROM.mif'
-INFO: [SIM-utils-43] Exported 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/cos_8_1024_signed.coe'
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-"xvlog -m64 --relax -prj tb_AM_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cos_make
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_AM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav'
-Vivado Simulator 2016.4
-Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: E:/Softwares/Vivado/Vivado/2016.4/bin/unwrapped/win64.o/xelab.exe -wto d704a2a7b0e34e98932c1741c97d1ace --debug typical --relax --mt 2 -L blk_mem_gen_v8_3_5 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_AM_behav xil_defaultlib.tb_AM xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
-Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_output_stage(...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_softecc_outpu...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5_mem_module(C_...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_axi_regs_fwd_v8_3(C_DATA...
-Compiling module blk_mem_gen_v8_3_5.blk_mem_gen_v8_3_5(C_FAMILY="art...
-Compiling module xil_defaultlib.ROM
-Compiling module xil_defaultlib.cos_make
-Compiling module xil_defaultlib.tb_AM
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_AM_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2016.4
-Time resolution is 1 ps
- Block Memory Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator module tb_AM.cos_make_inst.ROM_inst.inst.native_mem_module.blk_mem_gen_v8_3_5_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-run 100 us
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 20 13:06:33 2018...
