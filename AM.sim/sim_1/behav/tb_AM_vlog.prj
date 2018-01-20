@@ -1,8 +1,7 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  "../../../Design/IP_Core/ROM/ROM/sim/ROM.v"
-verilog xil_defaultlib  "../../../Design/Code/modulate.v"
 verilog xil_defaultlib  "../../../Design/Code/cos_make.v"
-verilog xil_defaultlib  "../../../Design/Code/TOP.v"
+verilog xil_defaultlib  "../../../Design/Code/modulate.v"
 verilog xil_defaultlib  "../../../Testbeach/tb_AM.v"
 
 # compile glbl module

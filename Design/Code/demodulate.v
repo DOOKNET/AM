@@ -1,7 +1,9 @@
 module demodulate(
 	input	clk,
 	input	rst_n,
-	input	
+	input	signed	[15:0]	AM_mod
 );
 
-endmodule // 
+
+
+endmodule

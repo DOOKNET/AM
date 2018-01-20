@@ -1,11 +1,9 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/ROM/ROM/sim/ROM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module modulate
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cos_make
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module modulate
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/Testbeach/tb_AM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_AM
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.sim/sim_1/behav/glbl.v" into library xil_defaultlib

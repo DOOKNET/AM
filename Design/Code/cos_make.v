@@ -1,13 +1,13 @@
 module cos_make(
 	input	clk,
 	input	rst_n,
-	output	reg	[7:0]	cos_100k,
-	output	reg	signed	[7:0]	cos_1M
+	output	reg	[7:0]	cos_s,
+	output	reg	signed	[7:0]	cos_c
 );
 
 //------------------------------------//
-parameter freq_s = 32'd429497;		//调制信号频率
-parameter freq_c = 32'd42949673;		//载波频率
+parameter freq_s = 32'd429497;			//调制信号频率10k
+parameter freq_c = 32'd42949673;		//载波频率1M
 parameter cnt_width = 8'd32;
 //------------------------------------//
 
@@ -32,26 +32,26 @@ assign	addr_c = cnt_c[cnt_width-1:cnt_width-10];
 //------------------------------------//
 
 //------------调用ROM核----------------//
-wire 	signed	[7:0]	cos_100k_r;
-wire 	signed	[7:0]	cos_1M_r;
+wire 	signed	[7:0]	cos_s_r;
+wire 	signed	[7:0]	cos_c_r;
 
 ROM			ROM_inst(
 	.clka	(clk),
 	.addra	(addr_s),
-	.douta	(cos_100k_r),
+	.douta	(cos_s_r),
 	.clkb	(clk),
 	.addrb	(addr_c),
-	.doutb	(cos_1M_r)
+	.doutb	(cos_c_r)
 );
 
 always @(posedge clk or negedge rst_n) begin
 	if(!rst_n)	begin
-		cos_100k <= 0;
-		cos_1M <= 0;
+		cos_s <= 0;
+		cos_c <= 0;
 	end
 	else	begin
-		cos_100k <= cos_100k_r + 8 'd128;
-		cos_1M <= cos_1M_r;
+		cos_s <= cos_s_r + 8 'd128;
+		cos_c <= cos_c_r;
 	end
 end
 

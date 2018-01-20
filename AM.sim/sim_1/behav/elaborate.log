@@ -7,12 +7,10 @@ WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [
 WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2016.4/nightly/2016_12_14_1733598/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_3/simulation/blk_mem_gen_v8_3.v:2420]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" Line 1. Module TOP doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" Line 1. Module modulate doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" Line 1. Module modulate doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v" Line 1. Module TOP doesn't have a timescale but at least one module in design has a timescale.
 WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/cos_make.v" Line 1. Module cos_make doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/modulate.v" Line 1. Module modulate doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
@@ -47,7 +45,6 @@ Compiling architecture xilinx of entity mult_gen_v12_0_12.mult_gen_v12_0_12_viv 
 Compiling architecture xilinx of entity mult_gen_v12_0_12.mult_gen_v12_0_12 [\mult_gen_v12_0_12(c_xdevicefami...]
 Compiling architecture mult_arch of entity xil_defaultlib.MULT [mult_default]
 Compiling module xil_defaultlib.modulate
-Compiling module xil_defaultlib.TOP
 Compiling module xil_defaultlib.tb_AM
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_AM_behav

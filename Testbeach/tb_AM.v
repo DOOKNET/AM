@@ -16,7 +16,7 @@ initial	begin
 	rst_n = 1;
 end
 //--------------------------//
-TOP				TOP_inst(
+modulate		modulate_inst0(
 	.clk		(sclk),
 	.rst_n		(rst_n),
 	.AM_mod		(AM_mod)
