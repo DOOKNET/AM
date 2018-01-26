@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1516423432">
-  <File Type="PA-TCL" Name="TOP.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="TOP_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="TOP.vds"/>
-  <File Type="RDS-UTIL" Name="TOP_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="TOP_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="TOP.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="TOP_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="TOP_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1516894276">
+  <File Type="PA-TCL" Name="modulate.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="modulate_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="modulate.vds"/>
+  <File Type="RDS-UTIL" Name="modulate_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="modulate_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="modulate.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="modulate_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="modulate_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/Design/IP_Core/MULT/MULT/MULT.xci">
@@ -17,14 +17,28 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/Design/Code/modulate.v">
+    <File Path="$PPRDIR/Design/Code/cos_make.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/Design/Code/cos_make.v">
+    <File Path="$PPRDIR/Design/Code/FIR_Control.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Design/Code/clk_div.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Design/Code/modulate.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -39,6 +53,12 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/Design/IP_Core/cos_8_1024_signed.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/Design/IP_Core/LowPass_20_500_128.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -61,4 +81,5 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="ROM"/>
+  <BlockFileSet Type="BlockSrcs" Name="FIR"/>
 </GenRun>

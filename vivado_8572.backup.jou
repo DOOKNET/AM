@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Thu Jan 25 18:39:24 2018
+# Process ID: 8572
+# Current directory: E:/Workspace/Vivado_16.4/2018_1_20_AM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9528 E:\Workspace\Vivado_16.4\2018_1_20_AM\AM.xpr
+# Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/vivado.log
+# Journal file: E:/Workspace/Vivado_16.4/2018_1_20_AM\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.xpr
+create_ip -name fir_compiler -vendor xilinx.com -library ip -version 7.2 -module_name FIR -dir E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/FIR
+set_property -dict [list CONFIG.CoefficientSource {COE_File} CONFIG.Coefficient_File {E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/LowPass_20_500_128.coe} CONFIG.Channel_Sequence {Basic} CONFIG.Sample_Frequency {20} CONFIG.Clock_Frequency {100} CONFIG.Coefficient_Structure {Symmetric} CONFIG.Data_Width {15} CONFIG.DATA_Has_TLAST {Not_Required} CONFIG.Coefficient_Sets {1} CONFIG.Number_Channels {1} CONFIG.Select_Pattern {All} CONFIG.Clock_Frequency {100} CONFIG.Coefficient_Sign {Signed} CONFIG.Quantization {Integer_Coefficients} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Fractional_Bits {0} CONFIG.Data_Fractional_Bits {0} CONFIG.Output_Rounding_Mode {Full_Precision} CONFIG.Output_Width {35} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.ColumnConfig {13} CONFIG.S_DATA_Has_TUSER {Not_Required} CONFIG.M_DATA_Has_TUSER {Not_Required}] [get_ips FIR]
+generate_target {instantiation_template} [get_files e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/FIR/FIR/FIR.xci]
+generate_target all [get_files  e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/FIR/FIR/FIR.xci]
+catch { config_ip_cache -export [get_ips -all FIR] }
+export_ip_user_files -of_objects [get_files e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/FIR/FIR/FIR.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/FIR/FIR/FIR.xci]
+launch_runs -jobs 4 FIR_synth_1
+export_simulation -of_objects [get_files e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/FIR/FIR/FIR.xci] -directory E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files/sim_scripts -ip_user_files_dir E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files -ipstatic_source_dir E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/modelsim} {questa=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/questa} {riviera=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/riviera} {activehdl=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+set_property needs_refresh false [get_runs ROM_synth_1]
+set_property needs_refresh false [get_runs ROM_impl_1]
+set_property needs_refresh false [get_runs FIR_synth_1]
+set_property needs_refresh false [get_runs FIR_impl_1]
+set_property -dict [list CONFIG.Data_Width {16} CONFIG.Data_Fractional_Bits {0} CONFIG.Output_Rounding_Mode {Full_Precision} CONFIG.Output_Width {36}] [get_ips FIR]
+generate_target all [get_files  e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/FIR/FIR/FIR.xci]
+catch { config_ip_cache -export [get_ips -all FIR] }
+export_ip_user_files -of_objects [get_files e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/FIR/FIR/FIR.xci] -no_script -sync -force -quiet
+reset_run FIR_synth_1
+launch_runs -jobs 4 FIR_synth_1
+export_simulation -of_objects [get_files e:/Workspace/Vivado_16.4/2018_1_20_AM/Design/IP_Core/FIR/FIR/FIR.xci] -directory E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files/sim_scripts -ip_user_files_dir E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files -ipstatic_source_dir E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/modelsim} {questa=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/questa} {riviera=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/riviera} {activehdl=E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+add_files -norecurse {E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/clk_div.v E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/FIR_Control.v}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TOP [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+source tb_AM.tcl
+run 100 us
+restart
+add_wave {{/tb_AM/TOP_inst/FIR_Control_inst2/clk}} {{/tb_AM/TOP_inst/FIR_Control_inst2/rst_n}} {{/tb_AM/TOP_inst/FIR_Control_inst2/data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/data_tdata}} {{/tb_AM/TOP_inst/FIR_Control_inst2/data_out}} {{/tb_AM/TOP_inst/FIR_Control_inst2/m_axis_data_tdata}} {{/tb_AM/TOP_inst/FIR_Control_inst2/s_axis_data_tready}} {{/tb_AM/TOP_inst/FIR_Control_inst2/m_axis_data_tvalid}} 
+run 100 us
+update_compile_order -fileset sources_1
+relaunch_sim
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1

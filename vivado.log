@@ -2,20 +2,20 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Mon Jan 22 12:48:45 2018
-# Process ID: 2060
+# Start of session at: Fri Jan 26 16:10:43 2018
+# Process ID: 7340
 # Current directory: E:/Workspace/Vivado_16.4/2018_1_20_AM
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15652 E:\Workspace\Vivado_16.4\2018_1_20_AM\AM.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18936 E:\Workspace\Vivado_16.4\2018_1_20_AM\AM.xpr
 # Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/vivado.log
 # Journal file: E:/Workspace/Vivado_16.4/2018_1_20_AM\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/clk_div.v'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Softwares/Vivado/Vivado/2016.4/data/ip'.
-open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 762.297 ; gain = 100.184
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 22 23:15:24 2018...
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 806.867 ; gain = 149.367
+remove_files  E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/clk_div.v

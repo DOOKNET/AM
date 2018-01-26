@@ -1,4 +1,5 @@
 # compile vhdl design source files
+vhdl xil_defaultlib  "../../../Design/IP_Core/FIR/FIR/sim/FIR.vhd"
 vhdl xil_defaultlib  "../../../Design/IP_Core/MULT/MULT/sim/MULT.vhd"
 
 # Do not sort compile order

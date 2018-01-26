@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Thu Jan 25 23:05:21 2018
+# Process ID: 6988
+# Current directory: E:/Workspace/Vivado_16.4/2018_1_20_AM
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13884 E:\Workspace\Vivado_16.4\2018_1_20_AM\AM.xpr
+# Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/vivado.log
+# Journal file: E:/Workspace/Vivado_16.4/2018_1_20_AM\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.xpr
+remove_files  E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v
+add_files -norecurse E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/TOP.v
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+set_property needs_refresh false [get_runs ROM_synth_1]
+set_property needs_refresh false [get_runs FIR_synth_1]
+set_property needs_refresh false [get_runs ROM_impl_1]
+set_property needs_refresh false [get_runs FIR_impl_1]
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_AM.tcl
+run 100 us
+restart
+add_wave {{/tb_AM/TOP_inst/FIR_Control_inst2/clk}} {{/tb_AM/TOP_inst/FIR_Control_inst2/rst_n}} {{/tb_AM/TOP_inst/FIR_Control_inst2/data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/data_tdata}} {{/tb_AM/TOP_inst/FIR_Control_inst2/data_out}} {{/tb_AM/TOP_inst/FIR_Control_inst2/m_axis_data_tdata}} {{/tb_AM/TOP_inst/FIR_Control_inst2/s_axis_data_tready}} {{/tb_AM/TOP_inst/FIR_Control_inst2/m_axis_data_tvalid}} 
+run 100 us
+run 100 us
+restart
+add_wave {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/aclk}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tready}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tdata}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/m_axis_data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/m_axis_data_tdata}} 
+run 100 us
+run 200 us
+run 50 us
+close_sim
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+set_property needs_refresh false [get_runs ROM_synth_1]
+set_property needs_refresh false [get_runs FIR_synth_1]
+set_property needs_refresh false [get_runs ROM_impl_1]
+set_property needs_refresh false [get_runs FIR_impl_1]
+launch_simulation
+source tb_AM.tcl
+restart
+add_wave {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/aclk}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tready}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tdata}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/m_axis_data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/m_axis_data_tdata}} 
+run 200 us
+close_sim
+launch_simulation
+source tb_AM.tcl
+add_wave {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/aclk}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tready}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tdata}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/m_axis_data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/m_axis_data_tdata}} 
+run 200 us
+close_sim
+launch_simulation
+source tb_AM.tcl
+restart
+add_wave {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/aclk}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tready}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/s_axis_data_tdata}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/m_axis_data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/FIR_inst0/m_axis_data_tdata}} 
+run 200 us
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_AM.tcl
+run 200 us
+close_sim

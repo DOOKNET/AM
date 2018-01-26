@@ -50,7 +50,7 @@ always @(posedge clk or negedge rst_n) begin
 		cos_c <= 0;
 	end
 	else	begin
-		cos_s <= cos_s_r + 8 'd128;
+		cos_s <= cos_s_r + 8 'd128;		//加上大小为峰值的直流分量
 		cos_c <= cos_c_r;
 	end
 end

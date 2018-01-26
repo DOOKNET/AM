@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
+# IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
+# Start of session at: Thu Jan 25 20:07:54 2018
+# Process ID: 6948
+# Current directory: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/FIR_synth_1
+# Command line: vivado.exe -log FIR.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FIR.tcl
+# Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/FIR_synth_1/FIR.vds
+# Journal file: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/FIR_synth_1\vivado.jou
+#-----------------------------------------------------------
+source FIR.tcl -notrace

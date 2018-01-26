@@ -2,11 +2,11 @@
 # Vivado v2016.4 (64-bit)
 # SW Build 1733598 on Wed Dec 14 22:35:39 MST 2016
 # IP Build 1731160 on Wed Dec 14 23:47:21 MST 2016
-# Start of session at: Sat Jan 20 12:43:54 2018
-# Process ID: 9416
+# Start of session at: Thu Jan 25 23:01:28 2018
+# Process ID: 17276
 # Current directory: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1
-# Command line: vivado.exe -log TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
-# Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1/TOP.vds
+# Command line: vivado.exe -log modulate.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source modulate.tcl
+# Log file: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1/modulate.vds
 # Journal file: E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source TOP.tcl -notrace
+source modulate.tcl -notrace
