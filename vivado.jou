@@ -12,3 +12,29 @@
 start_gui
 open_project E:/Workspace/Vivado_16.4/2018_1_20_AM/AM.xpr
 remove_files  E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/clk_div.v
+add_files -norecurse E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/DCOff_DSP.v
+launch_simulation
+source tb_AM.tcl
+run 200 us
+restart
+add_wave {{/tb_AM/TOP_inst/DCOff_DSP_inst3/clk}} {{/tb_AM/TOP_inst/DCOff_DSP_inst3/rst}} {{/tb_AM/TOP_inst/DCOff_DSP_inst3/din}} {{/tb_AM/TOP_inst/DCOff_DSP_inst3/dc}} {{/tb_AM/TOP_inst/DCOff_DSP_inst3/PRODUCT}} {{/tb_AM/TOP_inst/DCOff_DSP_inst3/K}} 
+run 200 us
+close_sim
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_AM.tcl
+run 200 us
+add_wave {{/tb_AM/TOP_inst/FIR_Control_inst2/clk}} {{/tb_AM/TOP_inst/FIR_Control_inst2/rst_n}} {{/tb_AM/TOP_inst/FIR_Control_inst2/s_axis_data_tdata}} {{/tb_AM/TOP_inst/FIR_Control_inst2/data_out}} {{/tb_AM/TOP_inst/FIR_Control_inst2/s_axis_data_tready}} {{/tb_AM/TOP_inst/FIR_Control_inst2/m_axis_data_tvalid}} {{/tb_AM/TOP_inst/FIR_Control_inst2/m_axis_data_tdata}} 
+add_wave {{/tb_AM/TOP_inst/DC_Off}} 
+restart
+run 200 us
+run 200 us
+close_sim
+remove_files  E:/Workspace/Vivado_16.4/2018_1_20_AM/Design/Code/DCOff_DSP.v
+launch_simulation
+source tb_AM.tcl
+restart
+add_wave {{/tb_AM/TOP_inst/clk}} {{/tb_AM/TOP_inst/rst_n}} {{/tb_AM/TOP_inst/AM_demod}} {{/tb_AM/TOP_inst/data_tdata}} {{/tb_AM/TOP_inst/AM_mod}} 
+run 200 us
+run 100 us
+close_sim

@@ -14,7 +14,7 @@ always @(posedge clk or negedge rst_n) begin
 		data_out <= 0;
 	end
 	else	begin
-		data_out <= m_axis_data_tdata[33:26];
+		data_out <= m_axis_data_tdata[33:26];	//根据仿真结果进行截位
 	end
 end
 

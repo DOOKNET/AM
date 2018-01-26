@@ -9,6 +9,7 @@ reg 	signed	[15:0]	data_tdata;
 wire 	signed	[15:0]	AM_mod;
 //--------------------------------//
 
+//-----------取绝对值-------------//
 always @(posedge clk or negedge rst_n) begin
 	if(!rst_n)	begin
 		data_tdata <= 0;
@@ -23,8 +24,9 @@ always @(posedge clk or negedge rst_n) begin
 		data_tdata <= data_tdata;
 	end
 end
-
 //--------------------------------//
+
+//-----------AM已调信号------------//
 modulate		modulate_inst0(
 	.clk		(clk),
 	.rst_n		(rst_n),
@@ -32,7 +34,7 @@ modulate		modulate_inst0(
 );
 //--------------------------------//
 
-//--------------------------------//
+//----------滤波器控制模块---------//
 FIR_Control				FIR_Control_inst2(
 	.clk				(clk),
 	.rst_n				(rst_n),
